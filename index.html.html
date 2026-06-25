@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///C:/Users/fabio.lewkowicz/Downloads/g15-plataforma%20(2).html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>G15 — Plataforma de Gestão</title>
+<script src="./G15 — Plataforma de Gestão_files/chart.umd.js.download"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --g:#0F6E56;--gd:#085041;--gl:#E1F5EE;--g2:#1D9E75;
+  --blue:#2563EB;--amber:#D97706;--purple:#7C3AED;--red:#DC2626;
+  --slate50:#F8FAFC;--slate100:#F1F5F9;--slate200:#E2E8F0;--slate300:#CBD5E1;
+  --slate400:#94A3B8;--slate600:#475569;--slate800:#1E293B;--slate900:#0F172A;
+  --text:var(--slate800);--t2:var(--slate600);--t3:var(--slate400);
+  --bdr:var(--slate200);--bdr2:var(--slate300);
+  --r:10px;--rlg:14px;--rxl:20px;
+  --sh:0 1px 2px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.1);
+  --shmd:0 4px 6px rgba(0,0,0,.07),0 10px 15px rgba(0,0,0,.1);
+  --shlg:0 20px 40px rgba(0,0,0,.12);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;background:var(--slate50);color:var(--text);font-size:14px;line-height:1.6;min-height:100vh}
+
+/* ──────────────────────── LANDING PAGE ──────────────────────── */
+#landing{display:block}
+.lp-hero{background:linear-gradient(135deg,var(--gd) 0%,var(--g) 50%,var(--g2) 100%);min-height:100vh;display:flex;flex-direction:column}
+.lp-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;position:relative;z-index:10}
+.lp-logo{display:flex;align-items:center;gap:12px}
+.lp-mark{width:42px;height:42px;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;letter-spacing:-0.5px}
+.lp-brand{color:#fff;font-size:18px;font-weight:700;letter-spacing:-0.3px}
+.lp-brand span{font-weight:400;opacity:.7;font-size:13px;display:block;margin-top:-2px}
+.lp-nav-cta{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);color:#fff;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+.lp-nav-cta:hover{background:rgba(255,255,255,.25)}
+
+.lp-hero-content{flex:1;display:flex;align-items:center;justify-content:center;padding:40px;text-align:center}
+.lp-hero-inner{max-width:700px}
+.lp-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:500;margin-bottom:28px;letter-spacing:.03em}
+.lp-badge-dot{width:6px;height:6px;border-radius:50%;background:#86efac;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+.lp-h1{font-size:clamp(36px,5vw,60px);font-weight:800;color:#fff;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
+.lp-h1 span{color:rgba(255,255,255,.55)}
+.lp-sub{font-size:18px;color:rgba(255,255,255,.75);margin-bottom:40px;line-height:1.6;max-width:520px;margin-left:auto;margin-right:auto}
+.lp-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.lp-btn-primary{background:#fff;color:var(--gd);padding:14px 32px;border-radius:50px;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.lp-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.lp-btn-sec{background:rgba(255,255,255,.12);color:#fff;padding:14px 32px;border-radius:50px;font-size:15px;font-weight:500;cursor:pointer;border:1px solid rgba(255,255,255,.25);transition:all .2s}
+.lp-btn-sec:hover{background:rgba(255,255,255,.2)}
+
+.lp-stats{display:flex;gap:0;justify-content:center;margin-top:60px;border-top:1px solid rgba(255,255,255,.15);padding-top:40px}
+.lp-stat{flex:1;max-width:160px;text-align:center;padding:0 20px;border-right:1px solid rgba(255,255,255,.15)}
+.lp-stat:last-child{border-right:none}
+.lp-stat-val{font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px}
+.lp-stat-label{font-size:11px;color:rgba(255,255,255,.6);margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+
+.lp-features{background:#fff;padding:80px 40px}
+.lp-features-inner{max-width:1100px;margin:0 auto}
+.lp-section-label{font-size:12px;font-weight:600;color:var(--g);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.lp-section-title{font-size:32px;font-weight:800;color:var(--slate900);letter-spacing:-0.5px;margin-bottom:12px}
+.lp-section-sub{font-size:16px;color:var(--t2);margin-bottom:48px;max-width:500px}
+.lp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lp-feat{background:var(--slate50);border-radius:var(--rlg);padding:28px;border:1px solid var(--bdr);transition:all .2s}
+.lp-feat:hover{border-color:var(--g);box-shadow:var(--shmd);transform:translateY(-2px)}
+.lp-feat-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.lp-feat-title{font-size:16px;font-weight:700;color:var(--slate900);margin-bottom:8px}
+.lp-feat-desc{font-size:13px;color:var(--t2);line-height:1.6}
+
+.lp-members{background:var(--slate50);padding:60px 40px;border-top:1px solid var(--bdr)}
+.lp-members-inner{max-width:1100px;margin:0 auto}
+.lp-members-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:32px}
+.lp-member-card{background:#fff;border:1px solid var(--bdr);border-radius:var(--r);padding:12px;text-align:center;transition:all .2s}
+.lp-member-card:hover{border-color:var(--g);box-shadow:var(--sh)}
+.lp-member-init{width:36px;height:36px;border-radius:10px;background:var(--gl);color:var(--gd);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.lp-member-name{font-size:10px;font-weight:600;color:var(--slate600);line-height:1.3}
+
+.lp-cta-section{background:linear-gradient(135deg,var(--gd),var(--g));padding:80px 40px;text-align:center}
+.lp-cta-section h2{font-size:36px;font-weight:800;color:#fff;letter-spacing:-0.5px;margin-bottom:12px}
+.lp-cta-section p{font-size:16px;color:rgba(255,255,255,.75);margin-bottom:32px}
+.lp-footer{background:var(--slate900);padding:30px 40px;text-align:center}
+.lp-footer p{font-size:12px;color:var(--slate400)}
+
+/* ──────────────────────── LOGIN ──────────────────────── */
+#login-screen{display:none;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(135deg,var(--gd) 0%,var(--g) 100%);position:fixed;inset:0;z-index:1000}
+.lcard{background:#fff;border-radius:var(--rxl);box-shadow:var(--shlg);padding:44px 48px;width:400px;max-width:90vw}
+.llogo{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+.lmark{width:44px;height:44px;background:var(--g);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px}
+.ltitle{font-size:20px;font-weight:700;color:var(--slate900)}.lsub{font-size:13px;color:var(--t3);margin-top:2px}
+.lcard label{display:block;font-size:12px;font-weight:600;color:var(--t2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.lcard input{width:100%;padding:11px 14px;border:1.5px solid var(--bdr2);border-radius:var(--r);font-size:14px;margin-bottom:16px;outline:none;transition:border .15s;color:var(--text)}
+.lcard input:focus{border-color:var(--g);box-shadow:0 0 0 3px var(--gl)}
+.btnl{width:100%;padding:12px;background:var(--g);color:#fff;border:none;border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;letter-spacing:.02em}
+.btnl:hover{background:var(--gd);transform:translateY(-1px);box-shadow:0 4px 12px rgba(15,110,86,.3)}
+.lerr{font-size:12px;color:var(--red);background:#FEF2F2;border:1px solid #FECACA;padding:10px 14px;border-radius:var(--r);margin-bottom:16px;display:none}
+.lback{font-size:12px;color:var(--t3);text-align:center;margin-top:16px;cursor:pointer}
+.lback:hover{color:var(--g)}
+
+/* ──────────────────────── APP ──────────────────────── */
+#app{display:none;flex-direction:column;min-height:100vh}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px;background:#fff;border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
+.tleft{display:flex;align-items:center;gap:10px}
+.amark{width:32px;height:32px;background:var(--g);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px}
+.aname{font-size:14px;font-weight:700;color:var(--slate900);letter-spacing:-0.2px}
+.anav{display:flex;gap:2px;margin-left:16px}
+.nb{padding:6px 14px;border-radius:8px;border:none;background:transparent;font-size:13px;color:var(--t2);cursor:pointer;font-weight:500;transition:all .12s}
+.nb:hover{background:var(--slate100);color:var(--text)}
+.nb.on{background:var(--gl);color:var(--gd);font-weight:600}
+.tright{display:flex;align-items:center;gap:10px}
+.upill{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--t2)}
+.uav{width:30px;height:30px;border-radius:50%;background:var(--gl);color:var(--gd);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.blo{font-size:12px;padding:5px 12px;border:1px solid var(--bdr2);border-radius:8px;background:transparent;cursor:pointer;color:var(--t3);font-weight:500;transition:all .12s}
+.blo:hover{background:var(--slate100);color:var(--slate600)}
+
+/* MAIN */
+.main{padding:24px;flex:1;max-width:1400px;margin:0 auto;width:100%}
+.page{display:none}.page.on{display:block}
+
+/* CARDS */
+.card{background:#fff;border-radius:var(--rlg);border:1px solid var(--bdr);padding:20px;margin-bottom:14px;box-shadow:var(--sh)}
+.ct{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
+
+/* KPIs */
+.kpi{background:var(--slate50);border-radius:var(--rlg);padding:16px 18px;border:1px solid var(--bdr);transition:all .15s}
+.kpi:hover{border-color:var(--slate300);box-shadow:var(--sh)}
+.kl{font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.kv{font-size:22px;font-weight:800;color:var(--slate900);letter-spacing:-0.5px}
+.ks{font-size:11px;color:var(--t3);margin-top:4px;font-weight:500}
+.up{color:var(--g)}.dn{color:var(--red)}
+
+/* BADGES */
+.bdg{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:3px 9px;border-radius:50px;letter-spacing:.01em}
+.bg{background:#DCFCE7;color:#166534}.ba{background:#FEF3C7;color:#92400E}.br{background:#FEE2E2;color:#991B1B}.bb{background:#DBEAFE;color:#1E40AF}.bp{background:#EDE9FE;color:#5B21B6}.bsl{background:var(--slate100);color:var(--slate600)}
+
+/* TABLES */
+.tbl{width:100%;border-collapse:collapse;font-size:12px}
+.tbl th{padding:10px 8px;color:var(--t3);font-weight:600;border-bottom:2px solid var(--bdr);text-align:right;white-space:nowrap;font-size:11px;text-transform:uppercase;letter-spacing:.03em}
+.tbl th:first-child{text-align:left}
+.tbl td{padding:9px 8px;border-bottom:1px solid var(--bdr);text-align:right;color:var(--t2);white-space:nowrap}
+.tbl td:first-child{text-align:left;color:var(--text);font-weight:600}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:var(--slate50)}
+
+/* CHARTS */
+.cw{position:relative;width:100%}
+.lgd{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:10px;font-size:11px;color:var(--t3);font-weight:500}
+.lgd span{display:flex;align-items:center;gap:6px}
+.ld{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+
+/* TABS */
+.stabs{display:flex;gap:4px;margin-bottom:16px;background:var(--slate100);padding:4px;border-radius:12px;width:fit-content}
+.stab{padding:7px 16px;font-size:12px;border:none;background:transparent;color:var(--t2);cursor:pointer;border-radius:9px;font-weight:500;transition:all .15s}
+.stab:hover{color:var(--text)}.stab.on{background:#fff;color:var(--gd);font-weight:700;box-shadow:var(--sh)}
+.spage{display:none}.spage.on{display:block}
+
+/* SECTION */
+.shd{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.shd h2{font-size:18px;font-weight:800;color:var(--slate900);letter-spacing:-0.3px}
+.pf{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.pf label{font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.04em}
+.pf select{font-size:13px;padding:7px 12px;border:1.5px solid var(--bdr2);border-radius:8px;background:#fff;color:var(--text);font-weight:500;cursor:pointer}
+
+/* BANK PILLS */
+.bpills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.bpill{padding:5px 16px;border-radius:50px;border:1.5px solid var(--bdr2);font-size:12px;cursor:pointer;background:#fff;color:var(--t2);font-weight:500;transition:all .15s}
+.bpill.on{color:#fff;border-color:transparent;font-weight:600}
+.bench-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;padding:4px 12px;border-radius:50px;background:#EDE9FE;color:#5B21B6;font-weight:600}
+
+/* RANK BARS */
+.rrow{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--bdr);font-size:12px}
+.rrow:last-child{border-bottom:none}
+.rn{width:20px;text-align:center;color:var(--t3);font-size:11px;font-weight:600}
+.rname{width:80px;font-weight:600;flex-shrink:0;color:var(--text)}
+.rbw{flex:1;height:8px;background:var(--slate100);border-radius:50px;overflow:hidden}
+.rb{height:100%;border-radius:50px;transition:width .4s}
+.rval{width:60px;text-align:right;font-weight:700;color:var(--text)}
+.rpct{width:36px;text-align:right;font-size:11px;color:var(--t3);font-weight:500}
+
+/* EXPO ROWS */
+.erow{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--bdr);font-size:12px}
+.erow:last-child{border-bottom:none}
+.ename{width:90px;font-weight:600;flex-shrink:0;font-size:11px;color:var(--text)}
+.ebw{flex:1;height:7px;background:var(--slate100);border-radius:50px;overflow:hidden}
+.eb{height:100%;border-radius:50px}
+.esaldo{width:52px;text-align:right;font-weight:700;font-size:11px;color:var(--text)}
+.epct{width:32px;text-align:right;font-size:10px;color:var(--t3)}
+.epot{width:46px;text-align:right;font-size:10px;color:var(--g);font-weight:600}
+
+/* PITCH */
+.pitch{font-size:13px;line-height:1.8;padding:16px 18px;background:var(--slate50);border-radius:var(--r);border-left:4px solid var(--g);color:var(--text)}
+.bsm{font-size:12px;padding:7px 14px;border:1.5px solid var(--bdr2);border-radius:8px;background:#fff;cursor:pointer;color:var(--t2);font-weight:500;transition:all .12s}
+.bsm:hover{background:var(--slate100)}.bprim{background:var(--g);color:#fff;border-color:var(--g)}.bprim:hover{background:var(--gd);box-shadow:0 4px 12px rgba(15,110,86,.25)}
+
+/* META */
+.meta-bar{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding:12px 16px;background:var(--slate50);border-radius:var(--r);border:1px solid var(--bdr);flex-wrap:wrap}
+.meta-bar label{font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:.04em}
+.meta-bar input[type=number]{font-size:15px;font-weight:700;padding:5px 10px;border-radius:8px;border:1.5px solid var(--bdr2);background:#fff;color:var(--text);width:100px}
+
+/* NOTIF */
+.notif{position:fixed;bottom:24px;right:24px;background:var(--slate900);color:#fff;padding:12px 18px;border-radius:12px;font-size:13px;font-weight:500;z-index:9999;transform:translateY(80px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);pointer-events:none;box-shadow:var(--shmd)}
+.notif.show{transform:translateY(0);opacity:1}.notif.ok{background:var(--g)}.notif.err{background:var(--red)}
+
+@media(max-width:768px){
+  .g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}
+  .anav{display:none}.lp-grid{grid-template-columns:1fr}
+  .lp-members-grid{grid-template-columns:repeat(4,1fr)}
+  .lp-stats{flex-wrap:wrap}.lp-stat{min-width:120px}
+  .lp-nav{padding:16px 20px}.lp-hero-content{padding:24px 20px}
+  .lp-features,.lp-members,.lp-cta-section{padding:48px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ LANDING PAGE ══════════════ -->
+<div id="landing">
+
+  <!-- HERO -->
+  <section class="lp-hero">
+    <nav class="lp-nav">
+      <div class="lp-logo">
+        <div class="lp-mark">G15</div>
+        <div class="lp-brand">G15 Plataforma<span>Gestão de Frotas &amp; Financeiro</span></div>
+      </div>
+      <button class="lp-nav-cta" onclick="showLogin()">Acessar plataforma →</button>
+    </nav>
+
+    <div class="lp-hero-content">
+      <div class="lp-hero-inner">
+        <div class="lp-badge"><span class="lp-badge-dot"></span>Plataforma exclusiva G15</div>
+        <h1 class="lp-h1">Inteligência de <span>negócios</span> para locadoras líderes</h1>
+        <p class="lp-sub">Dashboards em tempo real para acompanhar frota, endividamento e oportunidades bancárias dos 14 membros do G15.</p>
+        <div class="lp-ctas">
+          <button class="lp-btn-primary" onclick="showLogin()">Acessar plataforma</button>
+          <button class="lp-btn-sec" onclick="document.getElementById(&#39;features&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Conheça os módulos ↓</button>
+        </div>
+        <div class="lp-stats">
+          <div class="lp-stat"><div class="lp-stat-val">14</div><div class="lp-stat-label">Membros</div></div>
+          <div class="lp-stat"><div class="lp-stat-val">18.1k</div><div class="lp-stat-label">Veículos ativos</div></div>
+          <div class="lp-stat"><div class="lp-stat-val">R$1,9B</div><div class="lp-stat-label">Frota FIPE</div></div>
+          <div class="lp-stat"><div class="lp-stat-val">8</div><div class="lp-stat-label">Bancos mapeados</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="lp-features" id="features">
+    <div class="lp-features-inner">
+      <div class="lp-section-label">Módulos da plataforma</div>
+      <h2 class="lp-section-title">Tudo que o G15 precisa em um lugar</h2>
+      <p class="lp-section-sub">Dados atualizados, análises automáticas e insights prontos para reuniões com bancos e montadoras.</p>
+      <div class="lp-grid">
+        <div class="lp-feat">
+          <div class="lp-feat-icon" style="background:#DCFCE7">🏦</div>
+          <div class="lp-feat-title">Visão bancária</div>
+          <div class="lp-feat-desc">Mapeamento de endividamento por banco e membro, com benchmark G15 e cálculo automático de potencial de crédito adicional.</div>
+        </div>
+        <div class="lp-feat">
+          <div class="lp-feat-icon" style="background:#DBEAFE">🚗</div>
+          <div class="lp-feat-title">Gestão de frota</div>
+          <div class="lp-feat-desc">Acompanhamento de compras mensais por membro e marca, com histórico de 4 anos e comparativo anual.</div>
+        </div>
+        <div class="lp-feat">
+          <div class="lp-feat-icon" style="background:#EDE9FE">📊</div>
+          <div class="lp-feat-title">Market share</div>
+          <div class="lp-feat-desc">Participação de cada montadora na frota ativa do G15, com visão individual por locadora e tendências de crescimento.</div>
+        </div>
+        <div class="lp-feat">
+          <div class="lp-feat-icon" style="background:#FEF3C7">🎯</div>
+          <div class="lp-feat-title">Meta vs Realizado</div>
+          <div class="lp-feat-desc">Acompanhamento de metas de compras com projeção automática para o fim do ano no ritmo atual.</div>
+        </div>
+        <div class="lp-feat">
+          <div class="lp-feat-icon" style="background:#FEE2E2">✦</div>
+          <div class="lp-feat-title">Pitch com IA</div>
+          <div class="lp-feat-desc">Geração automática de apresentação personalizada por membro para levar em reuniões com instituições financeiras.</div>
+        </div>
+        <div class="lp-feat">
+          <div class="lp-feat-icon" style="background:#ECFDF5">🔒</div>
+          <div class="lp-feat-title">Acesso seguro</div>
+          <div class="lp-feat-desc">Plataforma com login e senha, acessível de qualquer dispositivo, sem instalação — dados G15 seguros.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBROS -->
+  <section class="lp-members">
+    <div class="lp-members-inner">
+      <div class="lp-section-label">Membros ativos</div>
+      <h2 class="lp-section-title" style="font-size:26px;margin-bottom:6px">14 locadoras, um grupo</h2>
+      <p style="font-size:14px;color:var(--t2)">As principais locadoras de médio porte do Brasil, unidas em dados e estratégia.</p>
+      <div class="lp-members-grid">
+        ${[
+          ['MF','Maestro Frotas'],['BF','Brasfrotas'],['CM','Carro na Mão'],['CC','Clean Car'],
+          ['SE','Seteloc'],['RG','Reche Frotas'],['RA','Raja'],['MC','Mister Car'],
+          ['B2','BR22'],['OB','OBDI'],['AL','Alocar'],['TK','Tradekar'],['P1','P1 Frotas'],['PT','Pontual']
+        ].map(([i,n])=&gt;`<div class="lp-member-card"><div class="lp-member-init">${i}</div><div class="lp-member-name">${n}</div></div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="lp-cta-section">
+    <h2>Pronto para acessar?</h2>
+    <p>Entre com suas credenciais G15 e veja os dados em tempo real.</p>
+    <button class="lp-btn-primary" onclick="showLogin()" style="font-size:16px;padding:16px 40px">Acessar plataforma →</button>
+  </section>
+
+  <footer class="lp-footer">
+    <p>© 2026 G15 — Grupo de Locadoras de Veículos &nbsp;·&nbsp; Plataforma de gestão interna &nbsp;·&nbsp; Todos os dados são confidenciais</p>
+  </footer>
+</div>
+
+<!-- ══════════════ LOGIN ══════════════ -->
+<div id="login-screen">
+  <div class="lcard">
+    <div class="llogo">
+      <div class="lmark">G15</div>
+      <div><div class="ltitle">Acesso restrito</div><div class="lsub">Plataforma G15 — Membros</div></div>
+    </div>
+    <div class="lerr" id="lerr">Usuário ou senha incorretos.</div>
+    <label>Usuário</label>
+    <input type="text" id="lu" placeholder="seu usuário" autocomplete="username">
+    <label>Senha</label>
+    <input type="password" id="lp" placeholder="••••••••" autocomplete="current-password">
+    <button class="btnl" onclick="doLogin()">Entrar na plataforma</button>
+    <div class="lback" onclick="showLanding()">← Voltar ao início</div>
+  </div>
+</div>
+
+<!-- ══════════════ APP ══════════════ -->
+<div id="app">
+  <div class="topbar">
+    <div class="tleft">
+      <div class="amark">G15</div>
+      <span class="aname">Plataforma G15</span>
+      <nav class="anav">
+        <button class="nb on" onclick="goPage(&#39;fin&#39;,this)">Financeiro</button>
+        <button class="nb" onclick="goPage(&#39;frota&#39;,this)">Frota</button>
+      </nav>
+    </div>
+    <div class="tright">
+      <div class="upill"><div class="uav" id="uav">G1</div><span id="uname">G15</span></div>
+      <button class="blo" onclick="doLogout()">Sair</button>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- ██ FINANCEIRO ██ -->
+    <div class="page on" id="page-fin">
+      <div class="stabs">
+        <button class="stab on" onclick="stab(&#39;fin&#39;,&#39;bancos&#39;,this)">Por banco</button>
+        <button class="stab" onclick="stab(&#39;fin&#39;,&#39;membro&#39;,this)">Por membro</button>
+      </div>
+
+      <div class="spage on" id="fin-bancos">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+          <div class="bpills" id="bpills"></div>
+          <span class="bench-pill" id="bpill">🏆 —</span>
+        </div>
+        <div class="g4" id="bkpis"></div>
+        <div class="card">
+          <div class="ct" id="btbl-title">Participação por membro</div>
+          <div style="overflow-x:auto">
+            <table class="tbl"><thead><tr>
+              <th style="text-align:left;min-width:120px">Membro</th>
+              <th>Frota FIPE</th><th>Saldo banco</th><th>% / frota</th>
+              <th>Benchmark</th><th>Potencial %</th><th>Potencial R$</th>
+            </tr></thead><tbody id="btbody"></tbody></table>
+          </div>
+          <div style="margin-top:8px;font-size:10px;color:var(--t3);font-style:italic" id="bnote"></div>
+        </div>
+        <div class="g2">
+          <div class="card">
+            <div class="ct">% sobre frota — atual vs benchmark G15</div>
+            <div class="lgd" id="lgd-expo"></div>
+            <div class="cw" style="height:240px"><canvas id="cExpo"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="ct">Potencial adicional R$ por membro</div>
+            <div class="cw" style="height:240px"><canvas id="cPot"></canvas></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ct">Ranking — saldo devedor total G15 por banco</div>
+          <div class="g2" style="margin-bottom:0">
+            <div id="rkbars" style="padding:4px 0"></div>
+            <div class="cw" style="height:230px"><canvas id="cRank"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spage" id="fin-membro">
+        <div class="pf"><label>Membro</label><select id="sel-m" onchange="renderMembro()"></select></div>
+        <div class="g4" id="mkpis"></div>
+        <div class="g2">
+          <div class="card">
+            <div class="ct" id="mb-bt">Dívida por banco</div>
+            <div id="mb-banks"></div>
+          </div>
+          <div class="card">
+            <div class="ct">% / frota — atual vs benchmark G15</div>
+            <div class="lgd" id="mb-lgd"></div>
+            <div class="cw" style="height:220px"><canvas id="cMB"></canvas></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ct">Resumo para apresentação ao banco</div>
+          <div class="pitch" id="mb-pitch">—</div>
+          <div style="margin-top:12px"><button class="bsm bprim" onclick="genPitch()">✦ Gerar pitch com IA</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ██ FROTA ██ -->
+    <div class="page" id="page-frota">
+      <div class="stabs">
+        <button class="stab on" onclick="stab(&#39;ft&#39;,&#39;mensal&#39;,this)">Compras mensais</button>
+        <button class="stab" onclick="stab(&#39;ft&#39;,&#39;marca&#39;,this)">Por marca</button>
+        <button class="stab" onclick="stab(&#39;ft&#39;,&#39;ms&#39;,this)">Market share</button>
+        <button class="stab" onclick="stab(&#39;ft&#39;,&#39;meta&#39;,this)">Meta vs Realizado</button>
+      </div>
+
+      <div class="spage on" id="ft-mensal">
+        <div class="pf"><label>Membro</label><select id="fm-m" onchange="renderMensal()"><option value="-1">Todos (G15)</option></select></div>
+        <div class="g4" id="kpi-m"></div>
+        <div class="card">
+          <div class="ct">
+            Compras mensais — unidades
+            <div class="lgd" style="margin:0">
+              <span><span class="ld" style="background:#0F6E56"></span>2026</span>
+              <span><span class="ld" style="background:#2563EB"></span>2025</span>
+              <span><span class="ld" style="background:#D97706"></span>2024</span>
+              <span><span class="ld" style="background:#94A3B8"></span>2023</span>
+            </div>
+          </div>
+          <div class="cw" style="height:260px"><canvas id="cMensal"></canvas></div>
+        </div>
+        <div class="g2">
+          <div class="card">
+            <div class="ct">Total anual — histórico</div>
+            <div class="cw" style="height:210px"><canvas id="cAnual"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="ct">Compras por membro — 2026 YTD</div>
+            <div class="cw" style="height:210px"><canvas id="cMemb"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spage" id="ft-marca">
+        <div class="g4" id="kpi-mk"></div>
+        <div class="g2">
+          <div class="card">
+            <div class="ct">
+              Compras por marca
+              <div class="lgd" style="margin:0">
+                <span><span class="ld" style="background:#0F6E56"></span>2026 YTD</span>
+                <span><span class="ld" style="background:#94A3B8"></span>2024</span>
+              </div>
+            </div>
+            <div class="cw" style="height:270px"><canvas id="cMarca"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="ct">BYD — ascensão dos elétricos</div>
+            <div class="lgd" id="lgd-byd"></div>
+            <div class="cw" style="height:270px"><canvas id="cBYD"></canvas></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ct">Tabela de compras por marca</div>
+          <div style="overflow-x:auto"><table class="tbl"><thead><tr>
+            <th style="text-align:left">Marca</th><th>2026 YTD</th><th>2025</th><th>2024</th><th>% 2026</th><th>Tendência</th>
+          </tr></thead><tbody id="tbl-mk"></tbody></table></div>
+        </div>
+      </div>
+
+      <div class="spage" id="ft-ms">
+        <div class="g4" id="kpi-ms"></div>
+        <div class="g2">
+          <div class="card">
+            <div class="ct">Market share frota ativa — montadoras</div>
+            <div class="lgd" id="lgd-ms"></div>
+            <div class="cw" style="height:250px"><canvas id="cMS"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="ct">Frota ativa por membro</div>
+            <div class="cw" style="height:250px"><canvas id="cFrotaM"></canvas></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="ct">Mix por montadora — frota individual de cada membro</div>
+          <div style="overflow-x:auto"><table class="tbl"><thead><tr>
+            <th style="text-align:left">Membro</th>
+            <th>FIAT</th><th>GM</th><th>VW</th><th>Toyota</th><th>Ford</th><th>Hyundai</th><th>Renault</th><th>Outros</th><th>Total</th>
+          </tr></thead><tbody id="tbl-ms"></tbody></table></div>
+        </div>
+      </div>
+
+      <div class="spage" id="ft-meta">
+        <div class="meta-bar">
+          <label>Meta anual 2026:</label>
+          <input type="number" id="metaIn" value="5380" min="100" step="50" oninput="renderMeta()">
+          <span style="font-size:11px;color:var(--t3)">unidades &nbsp;|</span>
+          <label>Membro:</label>
+          <select id="fm-meta" onchange="renderMeta()" style="font-size:12px;padding:6px 10px;border-radius:8px;border:1.5px solid var(--bdr2);background:#fff;color:var(--text)">
+            <option value="-1">Todos (G15)</option>
+          </select>
+        </div>
+        <div class="g4" id="kpi-meta"></div>
+        <div class="card">
+          <div class="ct">
+            Realizado acumulado vs Meta — com projeção meses restantes
+            <div class="lgd" style="margin:0" id="lgd-meta"></div>
+          </div>
+          <div class="cw" style="height:280px"><canvas id="cMeta"></canvas></div>
+        </div>
+        <div class="g2">
+          <div class="card">
+            <div class="ct">Mensal — realizado vs meta proporcional</div>
+            <div class="cw" style="height:210px"><canvas id="cMetaMes"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="ct">Situação atual</div>
+            <div id="meta-sit" style="padding:4px 0"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /main -->
+</div><!-- /app -->
+<div class="notif" id="notif"></div>
+
+<script>
+// ══ AUTH ══
+const USERS={'g15':{pass:'g15@',name:'G15',role:'Admin'}};
+
+function showLogin(){
+  document.getElementById('landing').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
+  setTimeout(()=>document.getElementById('lu').focus(),100);
+}
+function showLanding(){
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('landing').style.display='block';
+}
+function doLogin(){
+  const u=document.getElementById('lu').value.trim().toLowerCase();
+  const p=document.getElementById('lp').value;
+  const err=document.getElementById('lerr');
+  if(USERS[u]&&USERS[u].pass===p){
+    err.style.display='none';
+    document.getElementById('login-screen').style.display='none';
+    document.getElementById('app').style.display='flex';
+    document.getElementById('uav').textContent=USERS[u].name.slice(0,2).toUpperCase();
+    document.getElementById('uname').textContent=USERS[u].name;
+    initApp();
+  } else {
+    err.style.display='block';
+    document.getElementById('lp').value='';
+    document.getElementById('lp').focus();
+  }
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('lp').addEventListener('keydown',e=>{if(e.key==='Enter')doLogin();});
+  document.getElementById('lu').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('lp').focus();});
+});
+function doLogout(){
+  document.getElementById('app').style.display='none';
+  document.getElementById('lu').value='';
+  document.getElementById('lp').value='';
+  showLanding();
+}
+
+// ══ NAV ══
+function goPage(id,el){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('page-'+id).classList.add('on');if(el)el.classList.add('on');
+}
+function stab(g,id,el){
+  document.querySelectorAll(`[id^="${g}-"]`).forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.stab').forEach(t=>{if(t.getAttribute('onclick')&&t.getAttribute('onclick').includes(`'${g}'`))t.classList.remove('on');});
+  const t=document.getElementById(`${g}-${id}`);if(t)t.classList.add('on');if(el)el.classList.add('on');
+  if(g==='fin'&&id==='bancos')renderBank(S.ab);
+  if(g==='fin'&&id==='membro')renderMembro();
+  if(g==='ft'&&id==='mensal')renderMensal();
+  if(g==='ft'&&id==='marca')renderMarca();
+  if(g==='ft'&&id==='ms')renderMS();
+  if(g==='ft'&&id==='meta')renderMeta();
+}
+
+// ══ DADOS REAIS ══
+const MEMBROS=[
+  {g:'Maestro Frotas',fr:157,dL:139,frota:1116},
+  {g:'Brasfrotas',fr:166,dL:102,frota:1538},
+  {g:'Carro na Mão',fr:79,dL:53,frota:1013},
+  {g:'Clean Car',fr:113,dL:48,frota:1405},
+  {g:'Seteloc',fr:248,dL:99,frota:2522},
+  {g:'Reche Frotas',fr:276,dL:147,frota:2199},
+  {g:'Raja',fr:289,dL:63,frota:2356},
+  {g:'Mister Car',fr:122,dL:106,frota:1427},
+  {g:'BR22',fr:73,dL:51,frota:999},
+  {g:'OBDI',fr:107,dL:92,frota:751},
+  {g:'Alocar',fr:78,dL:12,frota:626},
+  {g:'Tradekar',fr:60,dL:12,frota:746},
+  {g:'P1 Frotas',fr:94,dL:49,frota:759},
+  {g:'Pontual',fr:75,dL:33,frota:655},
+];
+const BANKS=['Itaú','Bradesco','Santander','Stellantis','GM','Toyota','Volkswagen','Sicoob'];
+// Saldo devedor R$M absoluto — TODOS os bancos × membros (Composição Financeira jan/2026)
+// Ordem membros: Maestro,Brasfrotas,CarroNaMão,CleanCar,Seteloc,Reche,Raja,Mister,BR22,OBDI,Alocar,Tradekar,P1,Pontual
+const BD_ABS = {
+  'Itaú':        [0.0,13.77,2.81,25.57,0.64,42.16,4.08,26.73,9.25,8.09,0.0,0.0,2.76,0.0],
+  'Stellantis':  [0.0,17.66,4.97,4.09,21.25,14.33,11.53,13.47,3.47,6.64,0.75,0.0,5.1,8.2],
+  'Bradesco':    [0.0,16.61,1.78,7.86,11.37,18.23,0.0,1.27,4.73,10.85,0.0,2.23,10.65,8.87],
+  'Santander':   [5.78,0.0,5.06,0.57,10.82,34.01,0.0,0.57,4.62,9.54,5.24,0.0,2.36,0.62],
+  'Debêntures':  [75.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'GM':          [0.0,22.86,8.62,7.64,0.0,15.96,0.0,10.53,1.85,0.0,0.0,0.0,1.7,1.03],
+  'Toyota':      [0.0,17.61,1.24,0.74,2.11,10.81,0.0,3.98,3.97,6.15,0.0,0.0,5.96,6.31],
+  'Volkswagen':  [0.0,5.56,4.18,0.48,9.45,4.93,2.03,7.12,12.46,1.18,2.31,0.0,3.47,1.03],
+  'Sicoob':      [0.0,0.0,3.43,0.0,31.92,0.0,0.0,3.3,0.0,7.43,0.0,0.0,5.49,0.0],
+  'FIDC':        [0.0,0.0,0.0,0.0,0.0,0.0,34.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'CRA':         [30.28,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Caixa':       [0.0,0.0,0.0,0.0,0.0,0.85,0.0,0.0,0.0,22.63,0.0,0.0,0.0,0.0],
+  'Rodobens':    [0.0,0.0,2.61,0.0,0.0,0.02,8.4,3.27,0.0,0.0,0.0,0.0,3.46,3.19],
+  'Banco do Brasil':[0.0,0.0,3.95,0.0,0.0,0.59,0.0,13.43,0.0,0.0,0.0,0.0,0.0,2.67],
+  'Safra':       [0.0,2.31,1.53,1.04,0.11,3.53,0.0,0.0,5.52,5.1,0.0,0.0,0.58,0.18],
+  'Renault/RCI': [0.0,3.76,0.12,0.22,0.0,0.71,2.49,2.27,1.48,3.81,2.36,0.0,0.33,0.17],
+  'Sicredi':     [0.0,0.0,10.03,0.0,0.0,0.0,0.0,2.48,0.0,0.0,0.62,0.0,0.0,0.0],
+  'BBC':         [0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.53,3.15,0.0,0.0,0.0,2.19,0.26],
+  'BNB':         [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.69,9.48,0.0,0.0],
+  'Rendimento':  [9.63,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Original':    [0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.02,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Inter':       [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.09,0.0,0.0,0.0,0.0],
+  'C6':          [3.92,0.0,0.0,0.0,2.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Votorantin':  [6.33,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'BDMG':        [0.0,0.0,0.0,0.0,5.24,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'BOCOM BBM':   [3.15,0.0,0.0,0.0,1.44,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'ABC':         [0.0,0.8,0.55,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.16,0.0],
+  'BS2':         [3.78,0.23,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Unicred':     [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.61,0.0,0.0,0.0,0.0],
+  'Alfa':        [0.0,0.14,0.0,0.0,0.0,0.43,0.0,0.7,0.0,0.0,0.0,0.0,0.0,0.62],
+  'Daycoval':    [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.39,0.18],
+  'Cresol':      [0.0,0.0,1.46,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Mercedes':    [0.0,0.09,0.0,0.13,0.68,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Moneo':       [0.0,0.0,0.0,0.0,0.52,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'Hyundai':     [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.51,0.0,0.0,0.0,0.0,0.0,0.0],
+  'BMW':         [0.0,0.34,0.15,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],
+  'BMG':         [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.36,0.0,0.0,0.0,0.0,0.0,0.0],
+  'CNH':         [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.24,0.0,0.0,0.0,0.0,0.0,0.0],
+};
+function getSaldo(banco,mi){return BD_ABS[banco]?BD_ABS[banco][mi]||0:0;}
+function getBenchDec(banco){
+  if(!BD_ABS[banco])return 0;
+  var arr=BD_ABS[banco].map(function(v,i){return v/MEMBROS[i].fr;});
+  return Math.max.apply(null,arr);
+}
+// Lista dos 8 bancos principais para o filtro "Por banco"
+(banco,mi){return BD_ABS[banco]?BD_ABS[banco][mi]||0:0;}
+function getBenchDec(banco){const arr=BD_ABS[banco].map((v,i)=>v/MEMBROS[i].fr);return Math.max(...arr);}
+const BC=['#0F6E56','#2563EB','#D97706','#7C3AED','#DC2626','#0891B2','#1E40AF','#92400E'];
+const BD=[
+  [0.0000,0.0832,0.0354,0.2255,0.0026,0.0000,0.0141,0.2194,0.1272,0.0754,0.0000,0.0000,0.0294,0.0000],
+  [0.0000,0.1003,0.0225,0.0693,0.0458,0.0661,0.0000,0.0104,0.0651,0.1011,0.0000,0.0371,0.1137,0.1183],
+  [0.0367,0.0000,0.0639,0.0050,0.0436,0.1234,0.0000,0.0047,0.0636,0.0889,0.0672,0.0000,0.0252,0.0083],
+  [0.0000,0.1067,0.0627,0.0361,0.0857,0.0520,0.0399,0.1105,0.0477,0.0619,0.0096,0.0000,0.0544,0.1094],
+  [0.0000,0.1380,0.1087,0.0673,0.0000,0.0579,0.0000,0.0864,0.0255,0.0000,0.0000,0.0000,0.0182,0.0137],
+  [0.0000,0.1064,0.0156,0.0065,0.0085,0.0392,0.0000,0.0327,0.0546,0.0573,0.0000,0.0000,0.0636,0.0841],
+  [0.0000,0.0336,0.0528,0.0042,0.0381,0.0179,0.0070,0.0584,0.1714,0.0110,0.0296,0.0000,0.0371,0.0137],
+  [0.0000,0.0000,0.0433,0.0000,0.1287,0.0000,0.0000,0.0271,0.0000,0.0692,0.0000,0.0000,0.0586,0.0000],
+];
+
+// FROTA — dados reais
+const MESES=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+const MES_ATUAL=4; // Maio 2026 (últimos dados disponíveis)
+// Compras mensais 2026 reais (da aba Compras Realizadas)
+const COMP_2026_REAIS=[44,112,49,54,23,0,0,0,0,0,0,0];
+// Totais anuais confirmados
+const COMP_ANUAL={2023:2165,2024:1014,2025:1418,2026:282};
+// Compras 2026 por membro YTD reais
+const COMP_2026_M={
+  'P1 Frotas':99,'Raja':58,'Carro na Mão':39,'OBDI':29,'Clean Car':26,
+  'Reche Frotas':18,'BR22':13,'Brasfrotas':0,'Seteloc':0,'Maestro Frotas':0,
+  'Mister Car':0,'Alocar':0,'Tradekar':0,'Pontual':0
+};
+// Marcas 2026 YTD (reais)
+const MK26={FIAT:233,BYD:33,GM:16};
+const MK25={FIAT:156,TOYOTA:71,VOLKSWAGEN:31,GM:27,RAM:14,FORD:10,JEEP:9,OUTROS:5};
+const MK24={GM:62,TOYOTA:59,FIAT:29,VOLKSWAGEN:26,HYUNDAI:13,HONDA:6,OUTROS:7};
+// Frota ativa (real)
+const FROTA_QTD={'Seteloc':2522,'Raja':2356,'Reche Frotas':2199,'Brasfrotas':1538,'Mister Car':1427,'Clean Car':1405,'Maestro Frotas':1116,'Carro na Mão':1013,'BR22':999,'P1 Frotas':759,'OBDI':751,'Tradekar':746,'Pontual':655,'Alocar':626};
+const MS_FROTA={FIAT:4712,GM:4017,VOLKSWAGEN:3196,TOYOTA:2439,RENAULT:886,FORD:633,HYUNDAI:620,JEEP:443,MITSUBISHI:255,NISSAN:182,OUTROS:527};
+const MIX_MEMBRO={
+  'Seteloc':      {FIAT:33.4,GM:7.3,VOLKSWAGEN:14.0,TOYOTA:38.5,FORD:0.4,MITSUBISHI:2.3,OUTROS:4.1},
+  'Reche Frotas': {FIAT:22.8,GM:45.1,VOLKSWAGEN:11.8,TOYOTA:6.7,FORD:3.3,RENAULT:4.1,OUTROS:6.2},
+  'Raja':         {FIAT:20.7,GM:5.8,VOLKSWAGEN:13.0,TOYOTA:19.6,FORD:12.9,HYUNDAI:0.0,OUTROS:28.0},
+  'Mister Car':   {FIAT:25.1,GM:35.0,VOLKSWAGEN:18.0,TOYOTA:1.5,FORD:0.0,HYUNDAI:6.9,OUTROS:13.5},
+  'Clean Car':    {FIAT:25.2,GM:47.8,VOLKSWAGEN:19.9,TOYOTA:2.4,FORD:0.1,HYUNDAI:3.3,OUTROS:1.3},
+  'Brasfrotas':   {FIAT:43.1,GM:20.1,VOLKSWAGEN:13.5,TOYOTA:5.5,FORD:0.1,HYUNDAI:6.4,OUTROS:11.3},
+  'Maestro Frotas':{FIAT:18.0,GM:11.2,VOLKSWAGEN:18.8,TOYOTA:0.0,FORD:0.4,HYUNDAI:10.3,RENAULT:6.9,OUTROS:34.4},
+  'Carro na Mão': {FIAT:11.3,GM:30.4,VOLKSWAGEN:26.3,TOYOTA:5.6,FORD:10.4,HYUNDAI:0.9,OUTROS:15.1},
+  'P1 Frotas':    {FIAT:28.5,GM:9.5,VOLKSWAGEN:26.2,TOYOTA:19.1,FORD:2.1,HYUNDAI:0.5,OUTROS:14.1},
+  'Pontual':      {FIAT:28.4,GM:8.1,VOLKSWAGEN:20.9,TOYOTA:22.9,FORD:4.1,HYUNDAI:5.3,OUTROS:10.3},
+  'OBDI':         {FIAT:11.3,GM:25.7,VOLKSWAGEN:1.6,TOYOTA:29.0,FORD:0.1,RENAULT:13.1,OUTROS:19.2},
+  'BR22':         {FIAT:46.7,GM:18.6,VOLKSWAGEN:14.8,TOYOTA:3.1,FORD:0.1,HYUNDAI:5.5,OUTROS:11.2},
+  'Alocar':       {FIAT:6.2,GM:11.5,VOLKSWAGEN:10.2,TOYOTA:10.9,FORD:0.2,RENAULT:28.9,OUTROS:32.1},
+  'Tradekar':     {FIAT:13.8,GM:21.3,VOLKSWAGEN:44.4,TOYOTA:5.4,FORD:12.1,OUTROS:3.0},
+};
+const PREV_2026={
+  'Reche Frotas':1000,'Raja':730,'P1 Frotas':522,'Brasfrotas':446,'Clean Car':395,
+  'Alocar':390,'OBDI':388,'Pontual':350,'BR22':323,'Carro na Mão':323,
+  'Mister Car':318,'Maestro Frotas':100,'Tradekar':95,'Seteloc':0
+};
+
+const S={ab:0};
+const CH={};
+const gc='rgba(203,213,225,0.5)',tc='#94A3B8';
+
+// Chart defaults
+Chart.defaults.font.family="-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif";
+Chart.defaults.font.size=11;
+
+function mc(id,cfg){
+  if(CH[id])CH[id].destroy();
+  const el=document.getElementById(id);if(!el)return;
+  CH[id]=new Chart(el,cfg);return CH[id];
+}
+const fo={
+  responsive:true,maintainAspectRatio:false,
+  plugins:{legend:{display:false},tooltip:{
+    backgroundColor:'rgba(15,23,42,.9)',titleColor:'#fff',bodyColor:'rgba(255,255,255,.8)',
+    padding:10,cornerRadius:8,titleFont:{weight:'700',size:12}
+  }},
+  scales:{
+    x:{grid:{color:gc},ticks:{color:tc,font:{size:10}},border:{display:false}},
+    y:{grid:{color:gc},ticks:{color:tc,font:{size:10}},border:{display:false}}
+  }
+};
+
+function initApp(){
+  ['sel-m','fm-m','fm-meta'].forEach(id=>{
+    const sel=document.getElementById(id);if(!sel)return;
+    MEMBROS.forEach((m,i)=>{const o=document.createElement('option');o.value=i;o.textContent=m.g;sel.appendChild(o);});
+  });
+  const pe=document.getElementById('bpills');
+  BANKS.forEach((b,i)=>{
+    const btn=document.createElement('button');
+    btn.className='bpill'+(i===0?' on':'');
+    btn.style.background=i===0?BC[0]:'';
+    btn.textContent=b;
+    btn.onclick=()=>{
+      document.querySelectorAll('.bpill').forEach((x,j)=>{
+        x.classList.toggle('on',j===i);
+        x.style.background=j===i?BC[i]:'';
+        x.style.color=j===i?'#fff':'';
+      });
+      renderBank(i);
+    };
+    pe.appendChild(btn);
+  });
+  renderBank(0);renderMensal();
+}
+
+// ══ FINANCEIRO — BANCOS ══
+function renderBank(bi){
+  S.ab=bi;
+  const bname=BANKS[bi];
+  const saldos=BD_ABS[bname];
+  const benchDec=getBenchDec(bname);
+  const benchPct=Math.round(benchDec*100);
+  const benchMi=BD_ABS[bname].map((v,i)=>v/MEMBROS[i].fr).indexOf(benchDec);
+  const totS=+(saldos.reduce((s,v)=>s+v,0).toFixed(1));
+  const totPot=+(MEMBROS.reduce((s,m,i)=>s+Math.max(0,m.fr*benchDec-saldos[i]),0).toFixed(1));
+  const avgPct=Math.round(MEMBROS.reduce((s,m,i)=>s+saldos[i]/m.fr,0)/MEMBROS.length*100);
+  document.getElementById('bpill').textContent='🏆 Benchmark: '+benchPct+'% da frota — '+MEMBROS[benchMi].g;
+  document.getElementById('btbl-title').textContent=bname+' — saldo devedor por membro (R$ e % frota)';
+  document.getElementById('bnote').textContent='Benchmark: '+benchPct+'% ('+MEMBROS[benchMi].g+'). Potencial = (Benchmark − % atual) × Frota FIPE.';
+  document.getElementById('bkpis').innerHTML=
+    '<div class="kpi"><div class="kl">Saldo total G15</div><div class="kv">R$'+totS+'M</div><div class="ks">14 membros</div></div>'+
+    '<div class="kpi"><div class="kl">% médio / frota</div><div class="kv">'+avgPct+'%</div><div class="ks">média G15</div></div>'+
+    '<div class="kpi"><div class="kl">Benchmark % frota</div><div class="kv" style="color:#7C3AED">'+benchPct+'%</div><div class="ks">'+MEMBROS[benchMi].g+'</div></div>'+
+    '<div class="kpi"><div class="kl">Potencial total</div><div class="kv up">R$'+totPot+'M</div><div class="ks up">se todos atingirem benchmark</div></div>';
+  const tb=document.getElementById('btbody');tb.innerHTML='';
+  const lbs=[],atD=[],potD=[];
+  MEMBROS.forEach(function(m,i){
+    const s=saldos[i];
+    const ap=Math.round(s/m.fr*100);
+    const pp=Math.max(0,Math.round((benchDec-s/m.fr)*100));
+    const pv=+(Math.max(0,m.fr*benchDec-s).toFixed(1));
+    const isBench=(i===benchMi);
+    lbs.push(m.g.split(' ')[0]);atD.push(ap);potD.push(pp);
+    const bc2=ap>=benchPct?'bp':ap>benchPct*0.5?'bg':'bb';
+    tb.innerHTML+='<tr>'+
+      '<td>'+m.g+(isBench?' <span class="bdg bp">benchmark</span>':'')+'</td>'+
+      '<td>R$'+m.fr+'M</td>'+
+      '<td><strong>'+(s>0?'R$'+s.toFixed(1)+'M':'—')+'</strong></td>'+
+      '<td>'+(s>0?'<span class="bdg '+bc2+'">'+ap+'%</span>':'—')+'</td>'+
+      '<td><span class="bdg bp">'+benchPct+'%</span></td>'+
+      '<td>'+(isBench?'<span style="color:var(--t3);font-size:10px">é o benchmark</span>':'<strong style="color:var(--g)">'+(pp>0?pp+'%':'—')+'</strong>')+'</td>'+
+      '<td>'+(isBench||pv<=0?'—':'<strong style="color:var(--g)">R$'+pv.toFixed(1)+'M</strong>')+'</td>'+
+    '</tr>';
+  });
+  document.getElementById('lgd-expo').innerHTML=
+    '<span><span class="ld" style="background:'+BC[bi]+'"></span>% sobre frota atual</span>'+
+    '<span><span class="ld" style="background:rgba(124,58,237,.25)"></span>Benchmark '+benchPct+'%</span>';
+  mc('cExpo',{type:'bar',data:{labels:lbs,datasets:[
+    {label:'% atual',data:atD,backgroundColor:BC[bi],borderRadius:6,borderWidth:0},
+    {label:'Benchmark',data:new Array(MEMBROS.length).fill(benchPct),backgroundColor:'rgba(124,58,237,0.18)',borderRadius:6,borderWidth:0}
+  ]},options:Object.assign({},fo,{scales:{x:Object.assign({},fo.scales.x),y:Object.assign({},fo.scales.y,{ticks:{color:tc,font:{size:10},callback:function(v){return v+'%'}}})}})});
+  mc('cPot',{type:'bar',data:{labels:lbs,datasets:[{
+    label:'Potencial R$M',
+    data:MEMBROS.map(function(m,i){return Math.max(0,+(m.fr*benchDec-saldos[i]).toFixed(1));}),
+    backgroundColor:MEMBROS.map(function(_,i){return i===benchMi?'rgba(0,0,0,.08)':BC[bi];}),
+    borderRadius:6,borderWidth:0
+  }]},options:Object.assign({},fo,{scales:{x:Object.assign({},fo.scales.x),y:Object.assign({},fo.scales.y,{ticks:{color:tc,font:{size:10},callback:function(v){return 'R$'+v+'M'}}})}})});
+  const rk=BANKS.map(function(b,i2){return {b:b,i2:i2,total:+(BD_ABS[b].reduce(function(s,v){return s+v;},0).toFixed(1))};}).sort(function(a,b){return b.total-a.total;});
+  const rkTot=rk.reduce(function(s,r){return s+r.total;},0);
+  const mx=rk[0].total;
+  document.getElementById('rkbars').innerHTML=rk.map(function(r,idx){
+    return '<div class="rrow"><div class="rn">'+(idx+1)+'</div><div class="rname">'+r.b+'</div><div class="rbw"><div class="rb" style="width:'+Math.round(r.total/mx*100)+'%;background:'+BC[r.i2]+'"></div></div><div class="rval">R$'+r.total.toFixed(1)+'M</div><div class="rpct">'+Math.round(r.total/rkTot*100)+'%</div></div>';
+  }).join('');
+  mc('cRank',{type:'bar',data:{labels:rk.map(function(r){return r.b;}),datasets:[{
+    label:'Saldo G15',data:rk.map(function(r){return r.total;}),
+    backgroundColor:rk.map(function(r){return BC[r.i2];}),borderRadius:8,borderWidth:0
+  }]},options:Object.assign({},fo,{indexAxis:'y',scales:{
+    y:Object.assign({},fo.scales.y,{ticks:{color:tc,font:{size:11,weight:'600'}}}),
+    x:Object.assign({},fo.scales.x,{ticks:{color:tc,font:{size:10},callback:function(v){return 'R$'+v+'M'}}})
+  }})});
+}
+
+// ══ FINANCEIRO — POR MEMBRO ══
+function renderMembro(){
+  var mi=parseInt(document.getElementById('sel-m').value)||0;
+  var m=MEMBROS[mi];
+  var pDF=Math.round(m.dL/m.fr*100);
+  var bdc=pDF>65?'br':pDF>50?'ba':'bg';
+  document.getElementById('mb-bt').textContent='Dívida por banco — '+m.g;
+  document.getElementById('mkpis').innerHTML=
+    '<div class="kpi"><div class="kl">Frota FIPE (jan/26)</div><div class="kv">R$'+m.fr+'M</div><div class="ks">'+m.frota.toLocaleString()+' veículos</div></div>'+
+    '<div class="kpi"><div class="kl">Dívida financeira total</div><div class="kv">R$'+m.dL+'M</div><div class="ks">linhas ativas jan/2026</div></div>'+
+    '<div class="kpi"><div class="kl">Alavancagem</div><div class="kv"><span class="bdg '+bdc+'">'+pDF+'% da frota</span></div><div class="ks">'+(pDF>65?'⚠ acima do ideal':pDF>50?'atenção':'dentro do limite')+'</div></div>'+
+    '<div class="kpi"><div class="kl">Headroom (até 70%)</div><div class="kv up">R$'+Math.max(0,Math.round(m.fr*0.7)-m.dL)+'M</div><div class="ks up">potencial de crédito</div></div>';
+  // Cores para banco (baseado em posição no ranking do banco)
+  var BANK_COLORS=['#0F6E56','#2563EB','#D97706','#7C3AED','#DC2626','#0891B2','#1E40AF','#92400E',
+    '#065F46','#9D174D','#1F2937','#78350F','#14532D','#4C1D95','#7F1D1D','#0C4A6E',
+    '#374151','#6B21A8','#064E3B','#1E3A5F','#7C2D12','#1A2E1A','#2D1B69','#422006'];
+  // Listar todos os bancos onde membro tem saldo
+  var all_banks=Object.keys(BD_ABS);
+  var bdata=all_banks.map(function(b,bi){
+    var s=BD_ABS[b][mi]||0;
+    var benchDec=getBenchDec(b);
+    return {b:b,bi:bi,s:s,pv:Math.round(s/m.fr*100),bench:Math.round(benchDec*100),benchDec:benchDec};
+  }).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;});
+  var mx=bdata.length>0?bdata[0].s:1;
+  document.getElementById('mb-banks').innerHTML=bdata.map(function(x,idx){
+    var cor=BANK_COLORS[idx%BANK_COLORS.length];
+    var pot=Math.max(0,x.bench-x.pv);
+    var potVal=+(Math.max(0,m.fr*x.benchDec-x.s).toFixed(1));
+    return '<div class="erow">'+
+      '<div class="ename" style="width:100px">'+x.b+'</div>'+
+      '<div class="ebw"><div class="eb" style="width:'+Math.round(x.s/mx*100)+'%;background:'+cor+'"></div></div>'+
+      '<div class="esaldo">R$'+x.s.toFixed(2)+'M</div>'+
+      '<div class="epct">'+x.pv+'%</div>'+
+      '<div class="epot">'+(pot>0?'+'+pot+'%':'✓')+'</div>'+
+      '<div class="epot">'+(potVal>0?'R$'+potVal.toFixed(1)+'M':'—')+'</div>'+
+    '</div>';
+  }).join('');
+  // Gráfico apenas com bancos onde há saldo
+  var bdLabels=bdata.map(function(x){return x.b;});
+  var bdVals=bdata.map(function(x){return x.pv;});
+  var bdBench=bdata.map(function(x){return x.bench;});
+  var bdColors=bdata.map(function(_,idx){return BANK_COLORS[idx%BANK_COLORS.length];});
+  document.getElementById('mb-lgd').innerHTML=
+    '<span><span class="ld" style="background:var(--slate300)"></span>% sobre frota atual</span>'+
+    '<span><span class="ld" style="background:rgba(124,58,237,.3)"></span>Benchmark G15</span>';
+  mc('cMB',{type:'bar',data:{labels:bdLabels,datasets:[
+    {label:'atual',data:bdVals,backgroundColor:bdColors,borderRadius:6,borderWidth:0},
+    {label:'bench',data:bdBench,backgroundColor:'rgba(124,58,237,0.18)',borderRadius:6,borderWidth:0}
+  ]},options:Object.assign({},fo,{scales:{
+    x:Object.assign({},fo.scales.x,{ticks:{color:tc,font:{size:9}}}),
+    y:Object.assign({},fo.scales.y,{ticks:{color:tc,font:{size:10},callback:function(v){return v+'%'}}})
+  }})});
+  var topB=bdata[0]||{b:'—',s:0,pv:0};
+  var bestO=bdata.filter(function(x){return x.bench>x.pv;}).sort(function(a,b){return (b.bench-b.pv)-(a.bench-a.pv);})[0];
+  document.getElementById('mb-pitch').innerHTML=
+    '<strong>'+m.g+'</strong> possui frota avaliada em <strong>R$'+m.fr+'M</strong> (FIPE jan/2026), com '+m.frota.toLocaleString()+' veículos ativos e dívida financeira de <strong>R$'+m.dL+'M</strong> ('+pDF+'% do valor de frota).<br><br>'+
+    (topB.s>0?'<strong>'+topB.b+'</strong> é o principal credor com <strong>R$'+topB.s.toFixed(2)+'M</strong> ('+topB.pv+'% da frota).<br><br>':'')+
+    (bestO?'Maior oportunidade: <strong>'+bestO.b+'</strong> — exposição atual '+bestO.pv+'% vs benchmark G15 de '+bestO.bench+'%, potencial de <strong style="color:var(--g)">+'+(bestO.bench-bestO.pv)+'%</strong> = <strong style="color:var(--g)">R$'+(Math.max(0,m.fr*bestO.benchDec-(BD_ABS[bestO.b][mi]||0))).toFixed(1)+'M</strong> adicionais.':'Exposição concentrada em instrumentos próprios (debêntures/CRA).')+
+    '<br><br><span style="color:var(--t3);font-size:11px">Clique em "Gerar pitch com IA" para análise completa.</span>';
+}
+async function genPitch(){
+  const mi=parseInt(document.getElementById('sel-m').value)||0;
+  const m=MEMBROS[mi];
+  var bdata=Object.keys(BD_ABS).map(function(b){var s=BD_ABS[b][mi]||0;var bd=getBenchDec(b);return {b:b,s:s,pv:Math.round(s/m.fr*100),bench:Math.round(bd*100)};}).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;}).slice(0,8);
+  const el=document.getElementById('mb-pitch');
+  el.innerHTML='<span style="color:var(--t3)">✦ Gerando análise com IA...</span>';
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:800,messages:[{role:'user',content:`Você é consultor financeiro especializado em locadoras de veículos. Gere um pitch profissional (máx 180 palavras) para apresentar ao banco a oportunidade de ampliar crédito:\n\nLocadora: ${m.g}\nFrota FIPE: R$${m.fr}M | Veículos: ${m.frota} | Dívida: R$${m.dL}M (${Math.round(m.dL/m.fr*100)}% da frota)\nExposição por banco: ${bdata.map(x=>`${x.b}: R$${x.s}M (${x.pv}% da frota, benchmark G15: ${x.bench}%)`).join(' | ')}\n\nDestaque: solidez da garantia em frota, identificar o banco com maior headroom vs benchmark do G15. Tom executivo e direto.`}]})});
+    const d=await r.json();
+    el.innerHTML=(d.content?.[0]?.text||'Erro ao gerar.').replace(/\n/g,'<br>');
+  }catch(e){el.innerHTML='Erro de conexão. Verifique sua internet e tente novamente.';}
+}
+
+// ══ FROTA — MENSAL ══
+function renderMensal(){
+  const mi=parseInt(document.getElementById('fm-m').value);
+  // Dados mensais reais 2026
+  const tot26=COMP_2026_REAIS.reduce((s,v)=>s+v,0);
+  // Distribuição histórica proporcional
+  const saz=[0.07,0.08,0.08,0.09,0.08,0.09,0.09,0.09,0.08,0.09,0.09,0.07];
+  function getMes(ano,mes){
+    const tot={2023:2165,2024:1014,2025:1418,2026:282}[ano]||0;
+    if(ano===2026)return COMP_2026_REAIS[mes]||(mes>MES_ATUAL?0:0);
+    let v=Math.round(tot*saz[mes]);
+    if(mi>=0){const totFr=Object.values(FROTA_QTD).reduce((s,x)=>s+x,0);v=Math.round(v*Object.values(FROTA_QTD)[mi]/totFr);}
+    return v;
+  }
+  const tots=[[2023,2165],[2024,1014],[2025,1418],[2026,282]];
+  document.getElementById('kpi-m').innerHTML=`
+    <div class="kpi"><div class="kl">2026 YTD (Jan–Mai)</div><div class="kv">${tot26.toLocaleString()}</div><div class="ks">dados reais</div></div>
+    <div class="kpi"><div class="kl">2025 (completo)</div><div class="kv">1.418</div><div class="ks up">↑ 40% vs 2024</div></div>
+    <div class="kpi"><div class="kl">2024 (completo)</div><div class="kv">1.014</div><div class="ks dn">↓ 53% vs 2023</div></div>
+    <div class="kpi"><div class="kl">2023 (completo)</div><div class="kv">2.165</div><div class="ks">base histórica</div></div>`;
+  const anoCols=['#94A3B8','#D97706','#2563EB','#0F6E56'];
+  mc('cMensal',{type:'bar',data:{labels:MESES,datasets:[2023,2024,2025,2026].map((ano,ai)=>({
+    label:String(ano),
+    data:MESES.map((_,m)=>getMes(ano,m)),
+    backgroundColor:anoCols[ai],borderRadius:4,borderWidth:0,
+    borderSkipped:false
+  }))},options:{...fo,plugins:{...fo.plugins,tooltip:{...fo.plugins.tooltip,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y.toLocaleString()} un`}}}}});
+  mc('cAnual',{type:'bar',data:{labels:['2023','2024','2025','2026*'],datasets:[{
+    data:[2165,1014,1418,282],
+    backgroundColor:anoCols,borderRadius:8,borderWidth:0
+  }]},options:{...fo,plugins:{...fo.plugins,tooltip:{...fo.plugins.tooltip,callbacks:{label:ctx=>`${ctx.parsed.y.toLocaleString()} unidades`}}}}});
+  const membSort=Object.entries(COMP_2026_M).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+  mc('cMemb',{type:'bar',data:{
+    labels:membSort.map(([m])=>m.split(' ')[0]),
+    datasets:[{data:membSort.map(([,v])=>v),backgroundColor:'#0F6E56',borderRadius:6,borderWidth:0}]
+  },options:{...fo}});
+}
+
+// ══ FROTA — MARCAS ══
+function renderMarca(){
+  const allMarcas=[...new Set([...Object.keys(MK26),...Object.keys(MK24)])].sort((a,b)=>(MK26[b]||0)-(MK26[a]||0));
+  const tot26=Object.values(MK26).reduce((s,v)=>s+v,0);
+  const MK_COLORS={'FIAT':'#0F6E56','GM':'#2563EB','VOLKSWAGEN':'#1E40AF','TOYOTA':'#D97706','BYD':'#7C3AED','HYUNDAI':'#DC2626','FORD':'#0891B2','JEEP':'#065F46','RENAULT':'#92400E','RAM':'#B45309','OUTROS':'#94A3B8'};
+  document.getElementById('kpi-mk').innerHTML=`
+    <div class="kpi"><div class="kl">2026 YTD (Jan–Mai)</div><div class="kv">${tot26}</div><div class="ks">unidades reais</div></div>
+    <div class="kpi"><div class="kl">Marca líder 2026</div><div class="kv">FIAT</div><div class="ks">${Math.round((MK26.FIAT||0)/tot26*100)}% das compras</div></div>
+    <div class="kpi"><div class="kl">Grande destaque</div><div class="kv" style="color:#7C3AED">BYD</div><div class="ks">elétricos chegando forte</div></div>
+    <div class="kpi"><div class="kl">Marcas ativas</div><div class="kv">${Object.keys(MK26).length}</div><div class="ks">em 2026</div></div>`;
+  mc('cMarca',{type:'bar',data:{labels:allMarcas,datasets:[
+    {label:'2026 YTD',data:allMarcas.map(m=>MK26[m]||0),backgroundColor:allMarcas.map(m=>MK_COLORS[m]||'#94A3B8'),borderRadius:6,borderWidth:0},
+    {label:'2024',data:allMarcas.map(m=>MK24[m]||0),backgroundColor:'rgba(148,163,184,.35)',borderRadius:6,borderWidth:0}
+  ]},options:{...fo,scales:{x:{...fo.scales.x},y:{...fo.scales.y}}}});
+  document.getElementById('lgd-byd').innerHTML=`<span><span class="ld" style="background:#7C3AED"></span>BYD</span><span><span class="ld" style="background:#94A3B8"></span>Total G15</span>`;
+  mc('cBYD',{type:'bar',data:{labels:['2023','2024','2025','2026*'],datasets:[
+    {label:'BYD',data:[0,0,12,33],backgroundColor:'#7C3AED',borderRadius:8,borderWidth:0},
+    {label:'Total',data:[2165,1014,1418,282],backgroundColor:'rgba(148,163,184,.2)',borderRadius:8,borderWidth:0}
+  ]},options:{...fo}});
+  const tb=document.getElementById('tbl-mk');tb.innerHTML='';
+  allMarcas.forEach(marca=>{
+    const v26=MK26[marca]||0,v25=MK25[marca]||0,v24=MK24[marca]||0;
+    const tend=v26>0&&v24===0?'<span class="bdg bp">novo ↑</span>':v26>v24?`<span class="bdg bg">↑ crescendo</span>`:v26<v24?'<span class="bdg ba">↓ reduzindo</span>':'<span class="bdg bsl">= estável</span>';
+    tb.innerHTML+=`<tr><td><strong>${marca}</strong></td><td>${v26||'—'}</td><td>${v25||'—'}</td><td>${v24||'—'}</td><td>${v26?`<span class="bdg bb">${Math.round(v26/tot26*100)}%</span>`:'—'}</td><td>${tend}</td></tr>`;
+  });
+}
+
+// ══ FROTA — MARKET SHARE ══
+function renderMS(){
+  const MS_COLORS={'FIAT':'#0F6E56','GM':'#2563EB','VOLKSWAGEN':'#1E40AF','TOYOTA':'#D97706','RENAULT':'#92400E','FORD':'#0891B2','HYUNDAI':'#DC2626','JEEP':'#065F46','MITSUBISHI':'#7C3AED','NISSAN':'#B45309','OUTROS':'#94A3B8'};
+  const total=Object.values(FROTA_QTD).reduce((s,v)=>s+v,0);
+  document.getElementById('kpi-ms').innerHTML=`
+    <div class="kpi"><div class="kl">Frota total G15</div><div class="kv">${total.toLocaleString()}</div><div class="ks">veículos ativos (jan/2026)</div></div>
+    <div class="kpi"><div class="kl">Maior membro</div><div class="kv">Seteloc</div><div class="ks">2.522 veículos — 13.9%</div></div>
+    <div class="kpi"><div class="kl">Montadora líder</div><div class="kv">FIAT</div><div class="ks">26% da frota ativa G15</div></div>
+    <div class="kpi"><div class="kl">Montadoras ativas</div><div class="kv">${Object.keys(MS_FROTA).length}</div><div class="ks">na frota G15</div></div>`;
+  const marcas=Object.keys(MS_FROTA),vals=Object.values(MS_FROTA);
+  document.getElementById('lgd-ms').innerHTML=marcas.map(m=>`<span><span class="ld" style="background:${MS_COLORS[m]||'#94A3B8'}"></span>${m} ${Math.round((MS_FROTA[m]||0)/total*100)}%</span>`).join('');
+  mc('cMS',{type:'bar',data:{labels:marcas,datasets:[{
+    data:vals,backgroundColor:marcas.map(m=>MS_COLORS[m]||'#94A3B8'),borderRadius:8,borderWidth:0
+  }]},options:{...fo,scales:{x:{...fo.scales.x},y:{...fo.scales.y,ticks:{...fo.scales.y.ticks,callback:v=>v.toLocaleString()}}}}});
+  const membSort=Object.entries(FROTA_QTD).sort((a,b)=>b[1]-a[1]);
+  mc('cFrotaM',{type:'bar',data:{
+    labels:membSort.map(([m])=>m.split(' ')[0]),
+    datasets:[{data:membSort.map(([,v])=>v),backgroundColor:membSort.map((_,i)=>`hsl(${155+i*8},${60-i*2}%,${42+i*2}%)`),borderRadius:6,borderWidth:0}]
+  },options:{...fo}});
+  const tb=document.getElementById('tbl-ms');tb.innerHTML='';
+  Object.entries(FROTA_QTD).sort((a,b)=>b[1]-a[1]).forEach(([nome,tot])=>{
+    const mix=MIX_MEMBRO[nome]||{};
+    const g=m=>mix[m]?mix[m].toFixed(0)+'%':'—';
+    tb.innerHTML+=`<tr><td>${nome}</td><td>${g('FIAT')}</td><td>${g('GM')}</td><td>${g('VOLKSWAGEN')}</td><td>${g('TOYOTA')}</td><td>${g('FORD')}</td><td>${g('HYUNDAI')}</td><td>${g('RENAULT')}</td><td>—</td><td><strong>${tot.toLocaleString()}</strong></td></tr>`;
+  });
+}
+
+// ══ FROTA — META ══
+function renderMeta(){
+  const meta=parseInt(document.getElementById('metaIn').value)||5380;
+  const mi=parseInt(document.getElementById('fm-meta').value);
+  const totReal=COMP_2026_REAIS.reduce((s,v)=>s+v,0); // 282 reais
+  const mediaReal=Math.round(totReal/(MES_ATUAL+1));
+  const metaMes=Math.round(meta/12);
+  // Acumulado real
+  let acum=[],s=0;
+  COMP_2026_REAIS.forEach((v,i)=>{
+    if(i<=MES_ATUAL){s+=v;acum.push(s);}else acum.push(null);
+  });
+  const metaAcum=MESES.map((_,m)=>Math.round(meta*(m+1)/12));
+  const proj=[...new Array(MES_ATUAL+1).fill(null),totReal,...MESES.slice(MES_ATUAL+2).map((_,i)=>totReal+mediaReal*(i+2))];
+  const projFinal=totReal+mediaReal*(12-(MES_ATUAL+1));
+  const gap=projFinal-meta;
+  const pct=Math.round(totReal/((MES_ATUAL+1)/12*meta)*100);
+  const sb=gap>=0?'bg':Math.abs(gap)<meta*.1?'ba':'br';
+  document.getElementById('kpi-meta').innerHTML=`
+    <div class="kpi"><div class="kl">Meta anual 2026</div><div class="kv">${meta.toLocaleString()}</div><div class="ks">planejado G15</div></div>
+    <div class="kpi"><div class="kl">Realizado Jan–Mai</div><div class="kv">${totReal.toLocaleString()}</div><div class="ks">${Math.round(totReal/meta*100)}% da meta anual</div></div>
+    <div class="kpi"><div class="kl">vs meta proporcional</div><div class="kv" style="color:${pct>=100?'var(--g)':'var(--red)'}">${pct}%</div><div class="ks">${pct>=100?'✓ acima':'↓ abaixo'} da meta</div></div>
+    <div class="kpi"><div class="kl">Projeção fim de ano</div><div class="kv" style="color:${gap>=0?'var(--g)':'var(--red)'}">${projFinal.toLocaleString()}</div><div class="ks"><span class="bdg ${sb}">${gap>=0?'+':''}${gap.toLocaleString()} vs meta</span></div></div>`;
+  document.getElementById('lgd-meta').innerHTML=`
+    <span><span class="ld" style="background:#0F6E56"></span>Realizado acumulado</span>
+    <span><span class="ld" style="background:#7C3AED"></span>Meta acumulada</span>
+    <span><span class="ld" style="background:#0891B2;opacity:.8"></span>Projeção (ritmo atual)</span>`;
+  mc('cMeta',{type:'line',data:{labels:MESES,datasets:[
+    {label:'Realizado',data:acum,borderColor:'#0F6E56',backgroundColor:'rgba(15,110,86,.08)',tension:.4,pointRadius:5,pointBackgroundColor:'#0F6E56',pointBorderColor:'#fff',pointBorderWidth:2,fill:true,borderWidth:2.5},
+    {label:'Meta',data:metaAcum,borderColor:'#7C3AED',borderDash:[6,4],tension:0,pointRadius:3,pointBackgroundColor:'#7C3AED',fill:false,borderWidth:2,backgroundColor:'transparent'},
+    {label:'Projeção',data:proj,borderColor:'#0891B2',borderDash:[4,3],tension:.4,pointRadius:3,pointBackgroundColor:'#0891B2',fill:false,borderWidth:2,backgroundColor:'transparent'},
+  ]},options:{...fo,plugins:{...fo.plugins,tooltip:{...fo.plugins.tooltip,mode:'index',intersect:false}}}});
+  mc('cMetaMes',{type:'bar',data:{labels:MESES,datasets:[
+    {label:'Realizado',data:COMP_2026_REAIS,backgroundColor:MESES.map((_,m)=>m<=MES_ATUAL?'#0F6E56':'rgba(15,110,86,.12)'),borderRadius:6,borderWidth:0},
+    {type:'line',label:'Meta/mês',data:new Array(12).fill(metaMes),borderColor:'#7C3AED',borderDash:[5,3],tension:0,pointRadius:0,fill:false,borderWidth:2,backgroundColor:'transparent'},
+  ]},options:{...fo}});
+  const necRit=Math.round((meta-totReal)/(12-(MES_ATUAL+1)));
+  document.getElementById('meta-sit').innerHTML=[
+    ['Meses com dados','5 de 12 (Jan–Mai)'],
+    ['Média mensal realizada',`${mediaReal} un/mês`],
+    ['Meta mensal proporcional',`${metaMes} un/mês`],
+    ['Ritmo necessário (Jun–Dez)',`${necRit} un/mês`,necRit>mediaReal*1.5?'dn':necRit>mediaReal?'ba':'up'],
+    ['Projeção no ritmo atual',`${projFinal.toLocaleString()} unidades`,gap>=0?'up':'dn'],
+    ['Previsão planejada G15','5.380 unidades','bsl'],
+  ].map(([l,v,cls])=>`<div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:9px 0;border-bottom:1px solid var(--bdr)">
+    <span style="color:var(--t2);font-weight:500">${l}</span>
+    <strong ${cls&&!cls.startsWith('b')?`style="color:${cls==='up'?'var(--g)':cls==='dn'?'var(--red)':'var(--amber)'}"`:''}>${cls&&cls.startsWith('b')?`<span class="bdg ${cls}">${v}</span>`:v}</strong>
+  </div>`).join('')+'<div style="height:4px"></div>';
+}
+
+function showNotif(msg,type=''){
+  const el=document.getElementById('notif');
+  el.textContent=msg;el.className=`notif show ${type}`;
+  setTimeout(()=>el.className='notif',4000);
+}
+</script>
+
+
+</body></html>
