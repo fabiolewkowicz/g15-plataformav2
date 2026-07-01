@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0068)file:///C:/Users/fabio.lewkowicz/Downloads/g15-plataforma%20(2).html -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>G15 — Plataforma de Gestão</title>
-<script src="./G15 — Plataforma de Gestão_files/chart.umd.js.download"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -79,7 +79,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
 .lp-footer p{font-size:12px;color:var(--slate400)}
 
 /* ──────────────────────── LOGIN ──────────────────────── */
-#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(135deg,var(--gd) 0%,var(--g) 100%);position:fixed;inset:0;z-index:1000}
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(135deg,var(--gd) 0%,var(--g) 100%);position:relative;min-height:100vh}
 .lcard{background:#fff;border-radius:var(--rxl);box-shadow:var(--shlg);padding:44px 48px;width:400px;max-width:90vw}
 .llogo{display:flex;align-items:center;gap:14px;margin-bottom:36px}
 .lmark{width:44px;height:44px;background:var(--g);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px}
@@ -213,7 +213,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
 <body>
 
 <!-- ══════════════ LANDING PAGE ══════════════ -->
-<div id="landing">
+<div id="landing" style="display:none">
 
   <!-- HERO -->
   <section class="lp-hero">
@@ -232,7 +232,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
         <p class="lp-sub">Dashboards em tempo real para acompanhar frota, endividamento e oportunidades bancárias dos 14 membros do G15.</p>
         <div class="lp-ctas">
           <button class="lp-btn-primary" onclick="showLogin()">Acessar plataforma</button>
-          <button class="lp-btn-sec" onclick="document.getElementById(&#39;features&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Conheça os módulos ↓</button>
+          <button class="lp-btn-sec" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Conheça os módulos ↓</button>
         </div>
         <div class="lp-stats">
           <div class="lp-stat"><div class="lp-stat-val">14</div><div class="lp-stat-label">Membros</div></div>
@@ -296,7 +296,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
           ['MF','Maestro Frotas'],['BF','Brasfrotas'],['CM','Carro na Mão'],['CC','Clean Car'],
           ['SE','Seteloc'],['RG','Reche Frotas'],['RA','Raja'],['MC','Mister Car'],
           ['B2','BR22'],['OB','OBDI'],['AL','Alocar'],['TK','Tradekar'],['P1','P1 Frotas'],['PT','Pontual']
-        ].map(([i,n])=&gt;`<div class="lp-member-card"><div class="lp-member-init">${i}</div><div class="lp-member-name">${n}</div></div>`).join('')}
+        ].map(([i,n])=>`<div class="lp-member-card"><div class="lp-member-init">${i}</div><div class="lp-member-name">${n}</div></div>`).join('')}
       </div>
     </div>
   </section>
@@ -337,8 +337,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
       <div class="amark">G15</div>
       <span class="aname">Plataforma G15</span>
       <nav class="anav">
-        <button class="nb on" onclick="goPage(&#39;fin&#39;,this)">Financeiro</button>
-        <button class="nb" onclick="goPage(&#39;frota&#39;,this)">Frota</button>
+        <button class="nb on" onclick="goPage('fin',this)">Financeiro</button>
+        <button class="nb" onclick="goPage('frota',this)">Frota</button>
       </nav>
     </div>
     <div class="tright">
@@ -352,8 +352,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
     <!-- ██ FINANCEIRO ██ -->
     <div class="page on" id="page-fin">
       <div class="stabs">
-        <button class="stab on" onclick="stab(&#39;fin&#39;,&#39;bancos&#39;,this)">Por banco</button>
-        <button class="stab" onclick="stab(&#39;fin&#39;,&#39;membro&#39;,this)">Por membro</button>
+        <button class="stab on" onclick="stab('fin','bancos',this)">Por banco</button>
+        <button class="stab" onclick="stab('fin','membro',this)">Por membro</button>
       </div>
 
       <div class="spage on" id="fin-bancos">
@@ -418,10 +418,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
     <!-- ██ FROTA ██ -->
     <div class="page" id="page-frota">
       <div class="stabs">
-        <button class="stab on" onclick="stab(&#39;ft&#39;,&#39;mensal&#39;,this)">Compras mensais</button>
-        <button class="stab" onclick="stab(&#39;ft&#39;,&#39;marca&#39;,this)">Por marca</button>
-        <button class="stab" onclick="stab(&#39;ft&#39;,&#39;ms&#39;,this)">Market share</button>
-        <button class="stab" onclick="stab(&#39;ft&#39;,&#39;meta&#39;,this)">Meta vs Realizado</button>
+        <button class="stab on" onclick="stab('ft','mensal',this)">Compras mensais</button>
+        <button class="stab" onclick="stab('ft','marca',this)">Por marca</button>
+        <button class="stab" onclick="stab('ft','ms',this)">Market share</button>
+        <button class="stab" onclick="stab('ft','meta',this)">Meta vs Realizado</button>
       </div>
 
       <div class="spage on" id="ft-mensal">
@@ -1054,6 +1054,5 @@ function showNotif(msg,type=''){
   setTimeout(()=>el.className='notif',4000);
 }
 </script>
-
-
-</body></html>
+</body>
+</html>
